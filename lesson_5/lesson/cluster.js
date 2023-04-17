@@ -18,7 +18,7 @@ if (cluster.isPrimary) {
     worker.send({ message: "something" });
   }
 } else {
-  app.listen(porjt, host, () => {
+  app.listen(port, host, () => {
     console.log(`Worker ${cluster.worker.id} started...`);
   });
 }
